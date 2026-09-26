@@ -1,0 +1,39 @@
+1. Prompt used for types/order.ts
+
+I am writing types/order.ts for an order tracking frontend project. Tech stack i am using: next.js, typescript. write the file using types/interfaces as i instruct below:
+
+Order scenarios: delayed, not received, and tracking pending
+Order statuses: confirmed, processing, shipped, out for delivery, and delivered
+Timeline steps with completed, current, and upcoming states
+Alert messages with info, warning, and error tones
+Product information including name, image, variant, quantity, and price
+Shipping address
+Payment information
+Order pricing: subtotal, shipping, tax, and total
+Tracking information such as carrier and tracking number
+Delivery estimate with date, optional time, and optional original date
+Support actions such as contact support and report issue
+A main Order interface that combines all of the above
+
+Use TypeScript type and interface appropriately.
+
+Use StaticImageData from next/image for product images.
+
+Use optional properties only where they make sense. Do not add unnecessary fields or complicated TypeScript features.
+
+
+2. prompt for data/order.ts
+
+Now create the mock data for the order tracking page.
+
+I need 3 different order scenarios: delayed, not received, and tracking pending. The data should feel realistic and each scenario should behave differently on the page.
+
+Please reuse the same product and common order details where it makes sense, but give each scenario its own status, alert message, delivery estimate, timeline, and support actions.
+
+For the delayed order, make it look like the package is already out for delivery but has been delayed because of a problem during transit. For the not-received order, make the carrier show it as delivered even though the customer hasn't received it. For the tracking-pending order, keep it in the processing stage and don't include tracking information yet.
+
+Use realistic customer information, addresses, prices, dates, times, order IDs, and tracking numbers. Use the product image from /assets/products/aero-runner.jpg.
+
+The data should follow the existing Order, OrderDetails, and OrderScenario types from /types/order. Export the data as orders: Record<OrderScenario, Order> and also add a simple getOrder(scenario: OrderScenario) function.
+
+Keep the code straightforward and beginner-friendly. Don't add unnecessary types, helper functions, or any.
